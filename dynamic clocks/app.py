@@ -1,12 +1,29 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import os
+from pathlib import Path
 import requests
 import logging
 
 app = Flask(__name__)
 CORS(app)  # Fix lỗi CORS
 
-API_KEY = "392b44d861bff9b6fac2585893b51903"  # Thay thế bằng API Key mới
+
+def _load_dotenv() -> None:
+    for parent in Path(__file__).resolve().parents:
+        env_path = parent / ".env"
+        if env_path.is_file():
+            for line in env_path.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip("\"'"))
+            break
+
+
+_load_dotenv()
+API_KEY = os.getenv("API_KEY") or os.getenv("OWM_KEY", "")  # Thay thế bằng API Key mới
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)

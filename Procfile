@@ -1,1 +1,0 @@
-web: python [index.py](http://_vscodecontentref_/0)
