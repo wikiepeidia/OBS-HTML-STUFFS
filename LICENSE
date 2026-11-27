@@ -1,0 +1,31 @@
+`Dial-up access service.kt`, `overlay_proxy.py`
+
+青藤蛇的身体颜色大多是绿色与奶油色。它在上半身有一个黄色的类似领口的结构，背部有两片叶子。四肢短小但有力，面部神情经常表现为嘲笑与不屑：
+
+• ご要望：`vn-weather-with-locationiq-and-nominatim` リポジトリをAIで精査し（`git log` とソースコードを統合的に分析）、その中の位置情報分析アルゴリズムが正しく実装されているかを確認したい。
+
+• ジオコーディング（Geocoding）：
+
+• `git log` を `NominatimService.kt` に追加済み。
+
+• Kotlin プロキシ（`NominatimService.kt`、1〜788行目）および Python プロキシ（`overlay_proxy.py`、100〜230行目）が含まれています。
+
+• `vn-geocoding/SKILL.md` を参照してください。
+
+音声が鳴った際に、画面表示もそれに合わせて切り替わるようにすることは可能でしょうか？
+
+現在、OBS（Open Broadcaster Software）を用いて同様の検証を行っています。
+
+利用シーン：
+
+• 使用設定：選択された音声（`GPTCLOCK1.html`）と同じ技術を採用し、それをOBSに適用します。
+
+• `ui-ux-pro-max` プロジェクト内に `GPTCLOCK1.html` が含まれています。
+
+任意のページでHTMLを直接使用できます。また、以下の点も参考にしてください。注意点：
+
+• 説明：現在OBSの「ブラウザソース（Browser Source）」として使用しており、サイズは 300x150 または 1200x600 に設定可能です。
+
+• CSS設定：`GPTCLOCK1.html` には `transform:scale(...)` プロパティが含まれています。
+
+HTML/CSS を使用する際、必ず OBS を利用しなければならないのでしょうか？
